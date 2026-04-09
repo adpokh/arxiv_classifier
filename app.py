@@ -6,7 +6,7 @@ import numpy as np
 from huggingface_hub import hf_hub_download
 from huggingface_hub import snapshot_download
 import os
-
+import torchvision
 
 st.set_page_config(
     page_title="arXiv Article Classifier",
