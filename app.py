@@ -46,12 +46,14 @@ with col2:
 
 
 if st.button("Классифицировать", type="primary"):
-    if not title.strip():
-        st.error("Введите хотя бы название статьи")
+    if not title.strip() and not abstract.strip():
+        st.error("Введите хотя бы название статьи или абстракт")
     else:
-        text = title
+        text = ""
+        if title.strip():
+            text = title
         if abstract.strip():
-            text = title + " [SEP] " + abstract
+            text += " [SEP] " + abstract
         inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=256)
         with torch.no_grad():
             outputs = model(**inputs)
