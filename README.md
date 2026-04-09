@@ -16,8 +16,7 @@
 
 (Первый раз может загружаться несколько минут, т.к. нужно скачать модель и веса, они хранятся по адресу: https://huggingface.co/adpokh/arxiv-model)
 
-## Обучение модели 
-(train_model_1.py)
+## Обучение модели (train_model_1.py)
 
 **Модель:** `distilbert-base-uncased`
 
