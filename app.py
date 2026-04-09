@@ -35,8 +35,6 @@ def load_model():
 
 
 model, tokenizer, label_encoder = load_model()
-st.success("Модель успешно загружена!")
-
 
 col1, col2 = st.columns(2)
 
